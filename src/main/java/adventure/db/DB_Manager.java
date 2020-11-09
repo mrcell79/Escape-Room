@@ -11,7 +11,7 @@ public class DB_Manager {
 
     //Nome driver JDBC e URL di adventure.database
     private static final String JDBC_DRIVER = "org.h2.Driver";
-    private static final String DB_URL = "jdbc:h2:~/dbescape";
+    private static final String DB_URL = "jdbc:h2:./database h2/dbescape.mv.db";
 
     //Credenziali database
     private static final String USER = "Davide";
