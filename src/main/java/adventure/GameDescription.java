@@ -7,7 +7,6 @@ public abstract class GameDescription {
     private GameDescription game;
     private List<Room> rooms = new ArrayList<>();
     private List<GameObject> inventory = new ArrayList<>();
-    private Map<Integer, String> actions = new HashMap<>();
     private Map<Integer, GameObject> game_obj = new HashMap<>();
     private Map<Integer, String> descriptions = new HashMap<>();
     private List<Logic_Room> l_room = new ArrayList<>();
@@ -23,10 +22,6 @@ public abstract class GameDescription {
     }
     public Map<Integer, String> getDescriptions() {
         return descriptions;
-    }
-
-    public Map<Integer, String> getActions() {
-        return actions;
     }
     public Map<Integer, GameObject> getGame_obj() {
         return game_obj;

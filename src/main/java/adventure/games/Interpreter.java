@@ -142,7 +142,6 @@ public class Interpreter {
     public String open(GameDescription g, int o_id){
         String desc = "";
         o_id = g.getCurrentLogicRoom().getFirstObject();
-        //GameObject go = g.getGame_obj().get(o_id);
 
         int i = 0;
         boolean found = false;
@@ -166,7 +165,7 @@ public class Interpreter {
         return desc;
     }
 
-    public String read(GameDescription g, int o_id, int inner_o){
+    public String read(GameDescription g){
         String desc = "";
 
         gameObjectContainer container = (gameObjectContainer) g.getCurrentLogicRoom().getObjects().get(0);
@@ -184,7 +183,7 @@ public class Interpreter {
         return desc;
     }
 
-    public String use(GameDescription g, int o_id, int inner_o){
+    public String use(GameDescription g){
         String desc = "";
 
         gameObjectContainer container = (gameObjectContainer) g.getCurrentLogicRoom().getObjects().get(0);
@@ -202,9 +201,7 @@ public class Interpreter {
         return desc;
     }
 
-    public String pick_up(GameDescription g, int o_id){
-        o_id = g.getCurrentLogicRoom().getFirstObject();
-
+    public String pick_up(GameDescription g){
         String desc = "";
 
         gameObjectContainer container = (gameObjectContainer) g.getCurrentLogicRoom().getObjects().get(0);

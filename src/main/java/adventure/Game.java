@@ -260,9 +260,7 @@ public class Game {
         playerPanel.add(inventoryLabelName);
 
         playerSetup();
-
     }
-
 
     private void scaleImage(String s){
         BufferedImage img = null;
@@ -274,7 +272,6 @@ public class Game {
         Image dimg = img.getScaledInstance(imagePanel.getWidth(), imagePanel.getHeight(),Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(dimg);
         imageLabel.setIcon(scaledIcon);
-
     }
 
     public void playerSetup() {
@@ -285,7 +282,6 @@ public class Game {
         inventoryLabelName.setText(inventory);
         hpLabelNumber.setText(ap + playerHP);
         timeLabelNumber.setText(ap + time);
-
         startRoom();
     }
 
@@ -330,7 +326,6 @@ public class Game {
         choice4.setVisible(false);
         choice5.setVisible(false);
         choice6.setVisible(false);
-
     }
 
     public void descRoom() {
@@ -363,7 +358,6 @@ public class Game {
         choice4.setText("");
         choice5.setText("");
         choice6.setText("");
-
     }
 
     public Room crossRoad() {
@@ -483,10 +477,8 @@ public class Game {
     }
 
     public void west() {
-
         position = "west";
         Logic_Room WEST = ip.west(gamed, lr_W_id);
-
         time = time - 5;
         timeLabelNumber.setText("" + time);
         scaleImage("image project\\closedsettle2.png\\");
@@ -673,7 +665,7 @@ public class Game {
 
     public void read() {
         position = "read";
-        String desc_o = ip.read(gamed, o_id, inner_o);
+        String desc_o = ip.read(gamed);
         scaleImage("image project\\pergamena.png\\");
         mainTextArea.setText(desc_o);
         choice1.setText("Back");
@@ -689,7 +681,7 @@ public class Game {
 
         gameObjectContainer container = (gameObjectContainer) gamed.getCurrentLogicRoom().getObjects().get(0);
         GameObject potion = container.getContainerList().get(0);
-        String desc_o = ip.use(gamed, o_id, inner_o);
+        String desc_o = ip.use(gamed);
         scaleImage("image project\\potion.png\\");
         mainTextArea.setText(desc_o);
 
@@ -719,7 +711,7 @@ public class Game {
 
     public void pick_up() {
         position = "pick_up";
-        String desc_o = ip.pick_up(gamed, o_id);
+        String desc_o = ip.pick_up(gamed);
         scaleImage("image project\\old key.png\\");
         mainTextArea.setText(desc_o);
         inventoryLabelName.setForeground(Color.yellow);
