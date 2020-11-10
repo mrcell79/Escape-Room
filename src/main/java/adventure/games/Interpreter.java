@@ -9,16 +9,12 @@ import adventure.type.gameObjectContainer;
 
 public class Interpreter {
 
-
-
     private static final String OPENED_CONT = "Il Baule si à aperto!";
     private static final String PICKED = "Chiave raccolta!";
-
     private static final String NO_CONT_OBJ = "Non c'è più niente da raccogliere in questo baule!";
     private static final String ALREADY_OPEN = "Hai già aperto questo baule!";
 
-    public Interpreter() {
-    }
+    public Interpreter() { }
 
     public Logic_Room north(GameDescription g, short lr_N_id ){
         lr_N_id = g.getCurrentRoom().getLogic_rm_n();
