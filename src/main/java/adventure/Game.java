@@ -281,6 +281,7 @@ public class Game {
         String ap = " ";
         inventoryLabelName.setText(inventory);
         hpLabelNumber.setText(ap + playerHP);
+        hpLabelNumber.setForeground(Color.green);
         timeLabelNumber.setText(ap + time);
         startRoom();
     }
@@ -650,7 +651,11 @@ public class Game {
                     hpLabelNumber.setText("" + playerHP);
                     lose();
                 }else {
+
                     playerHP = playerHP - 15;
+                    if(playerHP < 20){
+                        hpLabelNumber.setForeground(Color.red);
+                    }
                     hpLabelNumber.setText("" + playerHP);
                 }
             }
@@ -692,6 +697,9 @@ public class Game {
                 lose();
             }else {
                 playerHP = playerHP - 15;
+                if(playerHP < 20){
+                    hpLabelNumber.setForeground(Color.red);
+                }
                 hpLabelNumber.setText("" + playerHP);
             }
 
